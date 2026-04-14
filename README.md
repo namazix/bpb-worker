@@ -48,6 +48,24 @@ This project is aimed to provide a user panel to access FREE, SECURE and PRIVATE
 - [How to use](https://bia-pain-bache.github.io/BPB-Worker-Panel/usage/)
 - [FAQ](https://bia-pain-bache.github.io/BPB-Worker-Panel/faq/)
 
+### macOS quick install
+
+On macOS, you can install and launch the BPB Wizard directly from Terminal. The script detects Apple Silicon vs Intel Macs, downloads the correct Wizard build, installs or updates it, and runs it for you:
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Worker-Panel/main/scripts/install-macos-wizard.sh)
+```
+
+### Subscription import tip
+
+After deployment, import the subscription URL from the panel into the matching client instead of creating a manual profile:
+
+- Xray clients: import the `?app=xray` subscription
+- Sing-box clients: import the `?app=sing-box` subscription
+- Clash/Mihomo clients: import the `?app=clash` subscription
+
+If you are testing for the first time, start with `Best Ping` or a `443` config.
+
 ## Supported Clients
 
 |       Client        |      Version      |  Fragment support  |  Warp Pro support  |
