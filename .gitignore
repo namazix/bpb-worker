@@ -6,6 +6,7 @@
 !src/**
 !scripts/
 !scripts/build.js
+!scripts/install-macos-wizard.sh
 !.github/
 !.github/**
 !README_fa.md

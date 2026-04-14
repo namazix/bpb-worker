@@ -13,13 +13,42 @@ To use this method, all you need is a Cloudflare account. You can [sign up here]
 !!! warning
     If you're connected to a VPN, disconnect it.
 
-### Windows - Linux - macOS
+### Windows
 
-Based on your operating system, [download the ZIP file](https://github.com/bia-pain-bache/BPB-Wizard/releases/latest), unzip it, and run the program.
+Based on your system architecture, [download the ZIP file](https://github.com/bia-pain-bache/BPB-Wizard/releases/latest), unzip it, and run the program.
 
-### Android
+!!! warning
+    The Wizard downloads `worker.js` from GitHub to customize and deploy it to your Cloudflare account. Because the binary is not code-signed, Windows Defender or other antivirus software may warn about it. Temporarily allow it if you trust the official release.
 
-Android users who have Termux installed on their phone can install the BPB Panel by just copying this code into Termux:
+### macOS
+
+The quickest way on macOS is to run this command in Terminal:
+
+```bash title="macOS - Apple Silicon and Intel"
+bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Worker-Panel/main/scripts/install-macos-wizard.sh)
+```
+
+It automatically detects whether your Mac is Apple Silicon or Intel, installs or updates BPB Wizard inside `~/.local/share/bpb-wizard`, and launches it.
+
+If you prefer manual installation, download the matching ZIP from the [latest release](https://github.com/bia-pain-bache/BPB-Wizard/releases/latest), unzip it, then run `./BPB-Wizard` from Terminal.
+
+- Apple Silicon: `BPB-Wizard-darwin-arm64.zip`
+- Intel: `BPB-Wizard-darwin-amd64.zip`
+
+!!! warning
+    `BPB-Wizard` is not signed by Apple, so Gatekeeper may show a warning after a manual download.
+
+If Gatekeeper blocks it, open Terminal in the extracted folder and run:
+
+```bash title="macOS - Remove Quarantine"
+xattr -dr com.apple.quarantine BPB-Wizard
+chmod +x BPB-Wizard
+./BPB-Wizard
+```
+
+### Android (Termux) - Linux
+
+Android users who have Termux installed on their phone and Linux users can install the BPB Panel by running this command:
 
 ```bash title="Termux - Linux"
 bash <(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Wizard/main/install.sh)
