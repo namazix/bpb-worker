@@ -23,6 +23,4 @@
             "@vless": ["protocols/websocket/vless"],
             "@trojan": ["protocols/websocket/trojan"],
             "@warp": ["protocols/warp"]
-        }
-    }
 }
